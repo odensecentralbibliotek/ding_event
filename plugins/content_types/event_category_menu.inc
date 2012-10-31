@@ -21,10 +21,10 @@ function ding_event_category_menu_content_type_render($subtype, $conf, $panel_ar
   if (isset($context[1]->data)) {
     $library = $context[1]->data;
     $uri = entity_uri('node', $library);
-    $base =  $uri['path']. '/events';
+    $base =  $uri['path']. '/event-category';
   }
   else {
-    $base = 'events';
+    $base = 'event-category';
   }
 
   $options = array();
@@ -36,7 +36,7 @@ function ding_event_category_menu_content_type_render($subtype, $conf, $panel_ar
   $items = array(l(t('All categories'), $base . '/all', $options));
 
   $vocabulary = taxonomy_vocabulary_machine_name_load('event_category');
-  $terms = taxonomy_get_tree($vocabulary->vid);
+  $terms = taxonomy_get_tree($vocabulary->vid, 0, NULL, TRUE);
 
   foreach ($terms as $term) {
     if ($selected_term && $selected_term->tid == $term->tid) {
@@ -45,7 +45,8 @@ function ding_event_category_menu_content_type_render($subtype, $conf, $panel_ar
     else {
       $options = array();
     }
-    $items[] = l($term->name, $base . '/' . $term->tid, $options);
+    $uri = entity_uri('taxonomy_term', $term);
+    $items[] = l($term->name, $uri['path'], $options);
   }
   $block->content = theme('item_list', array('items' => $items));
 
