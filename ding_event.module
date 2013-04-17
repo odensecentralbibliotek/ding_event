@@ -9,7 +9,7 @@
  */
 function ding_event_ding_library_menu_links() {
   return array(
-    'events' => array(
+    'event-category' => array(
       'title' => 'Events',
     ),
   );
