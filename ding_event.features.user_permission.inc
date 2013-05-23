@@ -14,7 +14,9 @@ function ding_event_user_default_permissions() {
   $permissions['create ding_event content'] = array(
     'name' => 'create ding_event content',
     'roles' => array(
-      0 => 'administrator',
+      'administrator' => 'administrator',
+      'formidler' => 'formidler',
+      'redaktør' => 'redaktør',
     ),
     'module' => 'node',
   );
@@ -23,7 +25,8 @@ function ding_event_user_default_permissions() {
   $permissions['delete any ding_event content'] = array(
     'name' => 'delete any ding_event content',
     'roles' => array(
-      0 => 'administrator',
+      'administrator' => 'administrator',
+      'redaktør' => 'redaktør',
     ),
     'module' => 'node',
   );
@@ -32,7 +35,9 @@ function ding_event_user_default_permissions() {
   $permissions['delete own ding_event content'] = array(
     'name' => 'delete own ding_event content',
     'roles' => array(
-      0 => 'administrator',
+      'administrator' => 'administrator',
+      'formidler' => 'formidler',
+      'redaktør' => 'redaktør',
     ),
     'module' => 'node',
   );
@@ -41,7 +46,9 @@ function ding_event_user_default_permissions() {
   $permissions['edit any ding_event content'] = array(
     'name' => 'edit any ding_event content',
     'roles' => array(
-      0 => 'administrator',
+      'administrator' => 'administrator',
+      'formidler' => 'formidler',
+      'redaktør' => 'redaktør',
     ),
     'module' => 'node',
   );
@@ -50,9 +57,22 @@ function ding_event_user_default_permissions() {
   $permissions['edit own ding_event content'] = array(
     'name' => 'edit own ding_event content',
     'roles' => array(
-      0 => 'administrator',
+      'administrator' => 'administrator',
+      'formidler' => 'formidler',
+      'redaktør' => 'redaktør',
     ),
     'module' => 'node',
+  );
+
+  // Exported permission: search ding_event content.
+  $permissions['search ding_event content'] = array(
+    'name' => 'search ding_event content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'search_config',
   );
 
   return $permissions;

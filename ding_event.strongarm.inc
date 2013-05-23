@@ -149,6 +149,13 @@ function ding_event_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'opening_hours_enabled_ding_event';
+  $strongarm->value = 0;
+  $export['opening_hours_enabled_ding_event'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_ding_event_da_pattern';
   $strongarm->value = 'arrangementer/[node:title]';
   $export['pathauto_node_ding_event_da_pattern'] = $strongarm;
@@ -173,6 +180,55 @@ function ding_event_strongarm() {
   $strongarm->name = 'pathauto_node_ding_event_und_pattern';
   $strongarm->value = '';
   $export['pathauto_node_ding_event_und_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'scheduler_publish_enable_ding_event';
+  $strongarm->value = 1;
+  $export['scheduler_publish_enable_ding_event'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'scheduler_publish_required_ding_event';
+  $strongarm->value = 0;
+  $export['scheduler_publish_required_ding_event'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'scheduler_publish_revision_ding_event';
+  $strongarm->value = 0;
+  $export['scheduler_publish_revision_ding_event'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'scheduler_publish_touch_ding_event';
+  $strongarm->value = 0;
+  $export['scheduler_publish_touch_ding_event'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'scheduler_unpublish_enable_ding_event';
+  $strongarm->value = 1;
+  $export['scheduler_unpublish_enable_ding_event'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'scheduler_unpublish_required_ding_event';
+  $strongarm->value = 1;
+  $export['scheduler_unpublish_required_ding_event'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'scheduler_unpublish_revision_ding_event';
+  $strongarm->value = 0;
+  $export['scheduler_unpublish_revision_ding_event'] = $strongarm;
 
   return $export;
 }
