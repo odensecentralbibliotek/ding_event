@@ -41,7 +41,15 @@ function ding_event_default_rules_configuration() {
         }
       ],
       "DO" : [
-        { "cache_actions_action_clear_views_cache" : { "view" : { "value" : { "ding_event" : "ding_event" } } } }
+        { "cache_actions_action_clear_panels_pane_cache" : { "panes" : { "value" : {
+                "50e6e700581b4" : "50e6e700581b4",
+                "50e6deb1cab8b" : "50e6deb1cab8b",
+                "50bf11a4e997d" : "50bf11a4e997d",
+                "50e6e8bd651e6" : "50e6e8bd651e6"
+              }
+            }
+          }
+        }
       ]
     }
   }');
