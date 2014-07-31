@@ -43,7 +43,7 @@ projects[ctools][subdir] = contrib
 projects[ctools][version] = "1.1"
 
 projects[date][subdir] = contrib
-projects[date][version] = "2.6"
+projects[date][version] = "2.8"
 
 projects[features][type] = module
 projects[features][subdir] = contrib
